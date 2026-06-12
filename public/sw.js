@@ -1,4 +1,4 @@
-self.addEventListener('push', function(event: any) {
+self.addEventListener('push', function(event) {
   if (event.data) {
     const data = event.data.json();
     const options = {
@@ -12,15 +12,15 @@ self.addEventListener('push', function(event: any) {
       }
     };
     event.waitUntil(
-      (self as any).registration.showNotification(data.title, options)
+      self.registration.showNotification(data.title, options)
     );
   }
 });
 
 self.addEventListener('install', (event) => {
-  (self as any).skipWaiting();
+  self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
-  (self as any).clients.claim();
+  self.clients.claim();
 });
