@@ -1,0 +1,6 @@
+{
+  "name": "Srujan's Challenge Tracker",
+  "description": "A premium personal challenge and social media analytics tracker. Installable on mobile, offline-capable, using AI vision for deep analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
